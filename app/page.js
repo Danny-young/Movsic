@@ -14,7 +14,7 @@ export default function Home() {
       Welcome to Movsic. <br />
       <br />
       Providing everything to you about entertainment needs. All in one place.
-             </h1>
+             </h1>      
       </div>     
      </div>
       
@@ -35,6 +35,7 @@ export default function Home() {
         not intended for commercial use, and do not own any of the content. Copyright  Disclaimer under the section 107 of the copyright
         1976, allowance is made for `&rdquo;`fair use`&rdquo;` of this video for commercial purposes
       </p>
+     
     </main>
   );
 }

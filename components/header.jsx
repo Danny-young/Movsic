@@ -12,7 +12,10 @@ function Header() {
       <Link href="/" className="mr-10">
       <Image src={logo} alt="logo" width={65} height={65} />
       </Link>
-      <Link href="/player" className="mr-10">
+      <Link href="/music" className="mr-10">
+       <div className="from-neutral-200 text-lg">Movie</div>
+      </Link>
+      <Link href="/movie" className="mr-10">
        <div className="from-neutral-200 text-lg">Music</div>
       </Link>
       <Link href="/about" className="mr-10">
