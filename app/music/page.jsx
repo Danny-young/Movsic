@@ -1,37 +1,50 @@
-import Image from "next/image";
-import MovieCarrousel from "@/components/MovieCarrousel";
-import {
-  getPopularMovies,
-  getTopRatedMovies,
-  getUpcomingMovies,
-} from "@/lib/getMovies";
-import CarouselBannerWrapper from "@/components/CarouselBannerWrapper";
-export default async function Home() {
-  const upcomingMovies = await getUpcomingMovies();
-  const topRatedMovies = await getTopRatedMovies();
-  const popularMovies = await getPopularMovies();
+import Image from 'next/image';
+import React from 'react'
+import music from '@/assets/Images/music.jpg'
 
-  /* const res = await fetch(`https://api.themoviedb.org/3/trending/all/day?api_key=2ec0d66f5bdf1dd12eefa0723f1479cf`);
-  const data = await res.json();
+function page() {
+
   
+    const togglePlay = () => {
+      // Handle play/pause functionality using audioRef.current
+    };
+  
+    return (
+      <div>
+          <header>Music Player</header>
+          <Image src={music} alt="" width={1920} height={100} />
+       {/*  <h3>{title} - {artist}</h3> */}
+       
 
-  if(!res.ok) {
-    throw new Error('Failed to fetch data')
-  }
-  const results = data.results;
-  console.log(results); */
-
-  return (
-    <main className="">
-     
-<CarouselBannerWrapper />
-
-      <div className="flex flex-col space-y-2 xl:-mt-48">
-                  
- <MovieCarrousel movies={upcomingMovies} title="Upcoming" />         
-<MovieCarrousel movies={topRatedMovies} title="Top Rated" />  
-<MovieCarrousel movies={popularMovies} title="Popular" /> 
+       <div className='mb-10'>
+        <h1 className='my-10 text-3xl'>Trending music</h1>
+        <div className='flex space-x-10'>
+        <div>
+          <h1>Diana Hamilton - Adom Grace</h1>
+        <audio controls autoplay>
+        <source src="/Diana-Hamilton-Adom-Grace.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
       </div>
-    </main>
-  );
-}
+        <div>
+          <h1>Nacee_-_Aseda</h1>
+        <audio controls autoplay>
+        <source src="/Nacee_-_Aseda.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+      </div>
+        <div>
+          <h1>Diana-Hamilton ft Mercy-Chinwo</h1>
+        <audio controls autoplay>
+        <source src="/Diana-Hamilton-The-Doing-Of-The-Lord-Ft-Mercy-Chinwo.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+      </div>
+      </div>
+       </div>
+      </div>
+    );
+  };
+
+
+export default page

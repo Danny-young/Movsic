@@ -2,6 +2,8 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import getStarted from '/videos/homepage.mp4';
+import Video from 'next-video'
 
 
 
@@ -23,19 +25,17 @@ export default function Home() {
         <ArrowRight className="ml-10" />
       </Link>
 
-      <div className="bg-[#1E1919] dark:bg-slate-800 h-full p-10">
-        <video autoPlay loop muted className="rounded-lg">
-          <source src="/homepage.mp4" type="video/mp4" />
-        </video>
+      <div className="bg-[#1E1919] dark:bg-slate-800 h-full p-10">       
+          <Video autoPlay loop muted className="rounded-lg" src={getStarted} />
       </div>
-
+      
       <p className="text-center font-bold text-xl pt-5">Disclaimer</p>
       <p className="text-center font-light p-2">
         This video is made for informational and educational purposoes only. It is
         not intended for commercial use, and do not own any of the content. Copyright  Disclaimer under the section 107 of the copyright
         1976, allowance is made for `&rdquo;`fair use`&rdquo;` of this video for commercial purposes
       </p>
-     
+      
     </main>
   );
 }

@@ -33,6 +33,7 @@ function MoviesCarousel({title, movies, isVertical}) {
               </div>
             ))
           : movies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
+          
       </div>
     </div>
   );
