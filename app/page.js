@@ -2,7 +2,7 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import getStarted from '/videos/homepage.mp4';
+
 import Video from 'next-video'
 
 
@@ -26,7 +26,10 @@ export default function Home() {
       </Link>
 
       <div className="bg-[#1E1919] dark:bg-slate-800 h-full p-10">       
-          <Video autoPlay loop muted className="rounded-lg" src={getStarted} />
+    {/*  <video width="320" height="240" controls preload="none">
+      <source src="https://pixabay.com/videos/director-chair-film-cinema-5130.mp4" type="video/mp4" />
+       Your browser does not support the video tag.
+    </video>  */}
       </div>
       
       <p className="text-center font-bold text-xl pt-5">Disclaimer</p>

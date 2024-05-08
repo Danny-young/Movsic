@@ -4,10 +4,12 @@ import React from 'react'
 import ThemeToggle from './ThemeToggle'
 import logo from '@/Assets/Images/mm.png'
 import Image from 'next/image'
+import GenreDropdown from './GenreDropdown'
+import SearchInput from './SearchInput'
 
 function Header() {
   return (
-    <div className='flex justify-between items-center z-50 sticky'>
+    <header className="fixed w-full z-20 top-0 flex items-center justify-between p-5 bg-gradient-to-t from-gray-200/0 via-gray-900/25 to-gray-900">
         <div className="flex items-center">
       <Link href="/" className="mr-10">
       <Image src={logo} alt="logo" width={65} height={65} />
@@ -23,7 +25,10 @@ function Header() {
       </Link>
       </div>
     
-    <div className='flex space-x-2 justify-center items-center'>
+      <div className="flex space-x-2">
+     <GenreDropdown />
+  {/*   <SearchInput /> */}
+  
     <ThemeToggle/>
     <UserButton afterSignOutUrl="/" />
 
@@ -31,7 +36,7 @@ function Header() {
       <SignInButton afterSignOutUrl="/" mode='modal' />
     </SignedOut>
     </div>
-    </div>
+    </header>
   )
 }
 
